@@ -1,0 +1,167 @@
+body{
+  background-color: white;
+  color: black;
+}
+
+header{
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+input[type="text"]{
+  width: 240px;
+  height: 30px;
+  border-radius: 10px;
+  padding-left: 20px;
+  border-color: black;
+  outline: none;
+  
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.search_btn{
+  height: 30px;
+  border-radius: 3px;
+  border-style: none;
+  cursor: pointer;
+  padding-top: 4px;
+}
+.search{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 40px;
+}
+.rotate_animation{
+  animation: rotateLogo 7s linear infinite;
+}
+.dashboard_container{
+  height: 690px;
+  width: 1100px;
+  
+}
+
+@keyframes rotateLogo {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+
+  }
+}
+
+.dashboard_header, .location{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.location{
+  gap: 10px;
+}
+.sidebar_container{
+  background-color: rgb(242, 242, 242);
+  border-radius: 10px;
+  position: absolute;
+  top: 420px;
+  right: 55px;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main, .weather{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+main{
+  justify-content: center;
+ }
+
+
+.condition{
+  display: flex;
+  flex-direction: column;
+}
+.temp{
+  font-size: 5.4em;
+}
+.degree p{
+  font-size: 2em;
+  position: relative;
+  bottom: 40px;
+}
+.forcast_container{
+  width: 100px;
+  height: 130px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.forcast_container p:nth-child(3){
+  position: relative;
+  bottom: 10px;
+}
+.forcast_props{
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+section .degree h1{
+  font-size: 2.8em;
+}
+section .degree p{
+  font-size: 1em;
+}
+
+section{
+  display: flex;
+  align-items: center;
+}
+section .condition{
+  margin-left: 20px;
+  gap: 0;
+}
+
+.hour{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+.hourly_forcast{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  bottom: 80px;
+  gap: 20px;
+}
+
+
+
+
+
+@media (max-width:710px) {
+  .sidebar_container{
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    left: 0px;
+    top: 350px;
+  }
+  .dashboard_container{
+    display: none;
+  }
+}
